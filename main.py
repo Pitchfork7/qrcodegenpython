@@ -1,9 +1,12 @@
 import qrcode
+import random
 
 x = input("> ")
-x = x.replace(":", "_").replace("/", "_").replace("?", "_").replace("=", "_").replace("&", "_")
-
-img = qrcode.make(x)
+y = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+if random.randint(1, 100) == 1:
+  img = qrcode.make(y)
+else:
+  img = qrcode.make(x)
 
 type(img)  # qrcode.image.pil.PilImage
 
